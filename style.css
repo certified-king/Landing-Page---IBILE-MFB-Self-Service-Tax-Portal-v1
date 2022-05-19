@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.header::after {
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/bg1.jpg');
+    background-size: cover;
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    display: block;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    transition: all 1000ms;
+}
+
+.header:hover::after {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
+
+.flex-container {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-item-2 a {
+    background-color: orange;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 80px;
+    text-decoration: none;
+    transition: all 1000ms;
+} 
+
+.flex-item-2 a:hover{
+    background-color: #63f677;
+} 
+
+.flex-item-1{
+    /**background-color: azure;**/
+    margin: 0 0 0 100px;
+    flex: 20%;
+    transition: all 1000ms;
+}
+
+.flex-item-2{
+    /**background-color: azure;**/
+    height: 80vh;
+    flex: 50%;
+    align-self: center;
+    line-height: 1.4;
+}
+
+.flex-item-3{
+    /**background-color: azure;**/
+    margin-left: 0;
+    flex: 20%;
+    transition: all 1000ms;
+}
+
+.flex-item-2 h1{
+    margin: 130px 0 0 80px;
+    font-size: 50px;
+    color: #1a0303d0;
+}
+
+.flex-item-2 h3{
+    margin: 0 0 0 80px;
+    font-size: 30px;
+    color: #1a0303d0;
+}
+
+.flex-item-2 span{
+    border: 2px dotted #a3a1a1d0;
+    border-radius: 10px;
+    padding:0 6px;
+    animation: ease-out;
+    transition: all 1000ms;
+    font-size: 35px;
+}
+
+.flex-item-2 p{
+    margin: 10px 0 30px 80px;
+    font-size: 25px;
+    color: #1a0303d0;
+}
+
+/** Mobile Responsive View **/
+
+@media (max-width: 700px) {
+    .flex-container{
+        flex-direction: column;
+        flex: 100%;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .flex-item-1 img{
+            width: 120px;
+            height: 120px;
+    }
+
+    .flex-item-3 img{
+        width: 120px;
+        height: 112px;
+    }
+
+    .flex-item-1{
+        margin: 20px 0 0 0;
+    }
+
+    .flex-item-2{
+        text-align: center;
+    }
+
+    .flex-item-3{
+        flex: 0%;
+        margin: 0 0 20px 0;
+    }
+
+    .header{
+        height: 100vh;
+        background-size: cover;
+        background-position: inherit;
+    }
+
+    .flex-item-2 h1{
+        margin: 50px 0 0 0;
+        font-size: 35px; 
+    }
+
+    .flex-item-2 h3{
+        margin: 0;
+        font-size: 22px;
+    }
+    
+    .flex-item-2 p{
+        margin: 10px 0 30px 0;
+        font-size: 20px;
+    }
+    
+    .flex-item-2 a{
+        padding: 10px;
+        margin-left: 0px;
+    } 
+}
+
+/** Tablet Responsive View **/
+
+@media (min-width: 750px) {
+    .flex-container{
+        flex-direction: column;
+        flex: 100%;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .flex-item-1 img{
+            width: 180px;
+            height: 180px;
+    }
+
+    .flex-item-3 img{
+        width: 180px;
+        height: 165px;
+    }
+
+    .flex-item-1{
+        margin: 30px 0 0 0;
+    }
+
+    .flex-item-2{
+        text-align: center;
+        
+    }
+
+    .flex-item-3{
+        flex: 0%;
+        margin: 0 0 30px 0;
+    }
+
+    .header{
+        height: 100vh;
+        background-size: cover;
+        background-position: inherit;
+    }
+
+    .flex-item-2 h1{
+        margin: 70px 0 0 0;
+        font-size: 70px; 
+    }
+
+    .flex-item-2 h3{
+        margin: 0;
+        font-size: 50px;
+    }
+    
+    .flex-item-2 p{
+        margin: 10px 0 40px 0;
+        font-size: 40px;
+    }
+    
+    .flex-item-2 a{
+        padding: 30px;
+        margin-left: 0px;
+        font-size: 30px;
+    } 
+}
+
+/** Landscape Responsive View **/
+
+@media (max-height: 540px) {
+    .flex-container{
+        flex-direction: row;
+        flex: 100%;
+        justify-content: space-evenly;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .flex-item-1 img{
+            width: 110px;
+            height: 110px;
+    }
+
+    .flex-item-3 img{
+        width: 130px;
+        height: 120px;
+    }
+
+    .flex-item-1{
+        margin: 20px 10px;
+        flex: 0%;
+    }
+
+    .flex-item-2{
+        text-align: center;
+    }
+
+    .flex-item-3{
+        flex: 0%;
+        margin: 20px 10px;
+    }
+
+    .header{
+        height: 100vh;
+        background-size: cover;
+        background-position: inherit;
+    }
+
+    .flex-item-2 h1{
+        margin: 70px 0 0 0;
+        font-size: 40px; 
+    }
+
+    .flex-item-2 h3{
+        margin: 0;
+        font-size: 20px;
+    }
+    
+    .flex-item-2 p{
+        margin: 10px 0 30px 0;
+        font-size: 20px;
+    }
+    
+    .flex-item-2 a{
+        padding: 10px;
+        margin-left: 0px;
+    } 
+}
+
+/** Landscape Responsive View **/
+
+@media (min-width: 1000px) {
+    .header::after {
+        content: '';
+        height: 100vh;
+        background-size: cover;
+        background-position: inherit;
+        display: block;
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+        transition: all 1000ms;
+    }
+    .flex-container{
+        flex-direction: row;
+        flex: 100%;
+        justify-content: space-evenly;
+        overflow: hidden;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .header:hover:after {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    .flex-item-1 img{
+            width: 180px;
+            height: 180px;
+    }
+
+    .flex-item-3 img{
+        width: 185px;
+        height: 170px;
+    }
+
+    .flex-item-1{
+        margin: 40px 0px 20px 120px;
+        flex: 0%;
+    }
+
+    .flex-item-2{
+        text-align: center;
+        flex: 30%;
+        margin:150px 0 0 0;
+    }
+
+    .flex-item-3{
+        flex: 0%;
+        margin: 20px 20px 20px 0;
+    }
+
+    .flex-item-2 h1{
+        margin: 50px 0 0 0;
+        font-size: 50px; 
+    }
+
+    .flex-item-2 h3{
+        margin: 0;
+        font-size: 30px;
+    }
+    
+    .flex-item-2 p{
+        margin: 10px 0 30px 0;
+        font-size: 20px;
+    }
+    
+    .flex-item-2 a{
+        padding: 10px;
+        margin-left: 0px;
+    } 
+}
+
